@@ -1,25 +1,29 @@
-\name{SensorVSample}
-\alias{SensorVSample}
+\name{data}
+\alias{data}
 \docType{data}
 \title{
-Calibration data sensor vs. soil samples
+Example calibration data for soil moisture sensors.
 }
 \description{
-data.frame on calibration data sensor vs. soil sample for the LTsER site Matsch/Mazia (South Tyrol, Italy) and multiple sites all over South Tyrol (Projects: MONALISA, HiResAlp).
+Example data set for soil moisture sensor calibration. Generally loads if shiny app is started. 
 }
 \usage{data("SensorVSample")}
 \format{
-  A data frame with 598 observations on the following 10 variables.
+  A data frame with 100 observations on the following 13 variables.
   \describe{
-    \item{\code{project}}{a factor, project name}
-    \item{\code{station}}{a factor, micrometeo station name}
-    \item{\code{landuse}}{a factor, land use specification}
-    \item{\code{date_obs}}{a factor, observation date}
-    \item{\code{depth}}{a integer, observation soil depth}
-    \item{\code{meanstation}}{a numeric, volumetric soil moisture content (SMC) of sensor / mean of station sensors}
-    \item{\code{samples}}{a numeric, volumetric SMC of soil samples}
-    \item{\code{date_obs}}{a numeric, mean volumetric SMC of soil samples}
-    \item{\code{sensorName}}{a factor, name of sensor used to retrieve meanstation, \emph{SensorMean} refers to a mean value of sensors installed in the station}
+    \item{\code{Project ID}}{a factor, project name}
+    \item{\code{Station ID}}{a factor,name of micro-meteorological station equiped with soil moisture sensors.}
+    \item{\code{Landuse}}{a factor, land use specification at the station.}
+    \item{\code{Date}}{a factor, observation date.}
+    \item{\code{Soil depth}}{a integer, observation soil depth in [cm].}
+    \item{\code{Sensor SWC}}{a numeric, volumetric soil water content (VWC) of sensor / mean of station sensors at specific soil depth, range [0;1].}
+    \item{\code{Sample SWC}}{a numeric, mean VWC of soil samples, by default three samples are generated for each soil depth during a field campaign, range [0;1].}
+    \item{\code{Sensor type}}{a factor, type of sensor used to measure VWC \code{Sensor SWC}}
+    \item{\code{Sensor ID}}{a factor, name of sensor used to measure VWC \code{Sensor SWC}}
+    \item{\code{Soil type}}{a numeric, soil type at the station.}
+    \item{\code{Latitude}}{a numeric, geographic coordinates at the station, latitude.}
+    \item{\code{Longitude}}{a numeric, geographic coordinates at the station, longiude.}
+    \item{\code{Altitude}}{a numeric, altitude in m a.s.l. at the station.}
   }
 }
 \details{

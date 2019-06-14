@@ -1,18 +1,36 @@
-Package: SMCcalibration
-Version: 1.0.1
-Date: 2015-09-07
-Title: Calibration of SMC sensors (South Tyrol)
-Author: Johannes Brenner <Johannes.Brenner@eurac.com>
-Maintainer: Johannes Brenner <Johannes.Brenner@eurac.com>
-Description: Calibrates SMC sensors vs. Soil Samples, includes interactive shiny app.
-Depends: R (>= 3.0.0)
-License: LGPL (>= 2)
+Package: SWCalibrateR
+Version: 1.1.0
+Date: 2019-03-19
+Title: Flexible calibration tool for soil moisture sensors
+Authors@R: c(
+    person("Johannes", "Brenner", email = "johannes.brennner@ufz.de",
+        role = c("aut", "cre")),
+    person("Giulio", "Genova", email = "Giulio.Genova@eurac.edu",
+        role = c("aut")))
+Maintainer@R: person("Johannes", "Brenner", email = "johannes.brennner@ufz.de",
+    role = c("aut", "cre"))
+Description: The R-shiny toolbox calibrates soil moisture sensors using volumetric
+    water content (VWC) measured in-situ by soil moisture sensors and retrieved 
+    from soil samples (field campaigns plus laboratory work). 
+    It includes an interactive shiny app for data upload and 
+    subset, estimation of linear models (OLS and robust MM-type estimator), 
+    visualisation of data and model estimate as well as model diagnostics,
+    in order to be able to identify leverage and outlier points.
+Depends: R (>= 3.5.0)
+License: MIT + file LICENSE
 LazyData: No
 LazyLoad: No
+Encoding: UTF-8
 Imports:
-    shiny,
-    ggplot2,
-    Cairo, 
-    robustbase
-	
-
+    Cairo (>= 1.5-9), 
+    dplyr (>= 0.7.6),
+    ggplot2 (>= 3.0.0),
+    leaflet (>= 2.0.2),
+    leaflet.extras (>= 1.0.0), 
+    robustbase (>= 0.93-3),
+    shiny (>= 1.1.0),
+    tidyr (>= 0.8.1)
+RoxygenNote: 6.1.0
+Suggests: 
+    testthat,
+    shinytest
